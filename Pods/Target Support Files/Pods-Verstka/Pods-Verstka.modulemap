@@ -1,0 +1,6 @@
+framework module Pods_Verstka {
+  umbrella header "Pods-Verstka-umbrella.h"
+
+  export *
+  module * { export * }
+}

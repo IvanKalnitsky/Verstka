@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		8246E5B926277E1500FB88A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8246E5B726277E1500FB88A5 /* Main.storyboard */; };
 		8246E5BB26277E1700FB88A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8246E5BA26277E1700FB88A5 /* Assets.xcassets */; };
 		8246E5BE26277E1700FB88A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8246E5BC26277E1700FB88A5 /* LaunchScreen.storyboard */; };
+		84EC4BF582D0056ACABE6F77 /* Pods_Verstka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB615BA9A9958B998B320E02 /* Pods_Verstka.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		8246E5BA26277E1700FB88A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8246E5BD26277E1700FB88A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8246E5BF26277E1700FB88A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC4BE785B37C75BD20AA5C03 /* Pods-Verstka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Verstka.release.xcconfig"; path = "Target Support Files/Pods-Verstka/Pods-Verstka.release.xcconfig"; sourceTree = "<group>"; };
+		EB615BA9A9958B998B320E02 /* Pods_Verstka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Verstka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F750355C2D20753CB33D9972 /* Pods-Verstka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Verstka.debug.xcconfig"; path = "Target Support Files/Pods-Verstka/Pods-Verstka.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84EC4BF582D0056ACABE6F77 /* Pods_Verstka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D2612EDEB9F3240DD4C6F32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB615BA9A9958B998B320E02 /* Pods_Verstka.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5422AB5242AFE4E836502804 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F750355C2D20753CB33D9972 /* Pods-Verstka.debug.xcconfig */,
+				CC4BE785B37C75BD20AA5C03 /* Pods-Verstka.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8246E5A526277E1500FB88A5 = {
 			isa = PBXGroup;
 			children = (
 				8246E5B026277E1500FB88A5 /* Verstka */,
 				8246E5AF26277E1500FB88A5 /* Products */,
+				5422AB5242AFE4E836502804 /* Pods */,
+				1D2612EDEB9F3240DD4C6F32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8246E5C226277E1700FB88A5 /* Build configuration list for PBXNativeTarget "Verstka" */;
 			buildPhases = (
+				935DE81ACD9523F2AC5D87DF /* [CP] Check Pods Manifest.lock */,
 				8246E5AA26277E1500FB88A5 /* Sources */,
 				8246E5AB26277E1500FB88A5 /* Frameworks */,
 				8246E5AC26277E1500FB88A5 /* Resources */,
+				47BDB853232832FDA9ED5F74 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +157,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47BDB853232832FDA9ED5F74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Verstka/Pods-Verstka-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Verstka/Pods-Verstka-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Verstka/Pods-Verstka-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		935DE81ACD9523F2AC5D87DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Verstka-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8246E5AA26277E1500FB88A5 /* Sources */ = {
@@ -283,6 +351,7 @@
 		};
 		8246E5C326277E1700FB88A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F750355C2D20753CB33D9972 /* Pods-Verstka.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +371,7 @@
 		};
 		8246E5C426277E1700FB88A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC4BE785B37C75BD20AA5C03 /* Pods-Verstka.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
